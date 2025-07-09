@@ -46,7 +46,6 @@ install_com() {
   # Typora, Go, SecLists
   log_info "Installing Typora, Go, SecLists"
   sudo snap install typora
-  sudo snap install go --classic
   sudo snap install seclists
 
   # Tmux plugin
