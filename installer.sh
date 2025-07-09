@@ -184,7 +184,7 @@ install_web() {
 
 install_dot() {
   log_info "Installing dotfiles, .zshrc, .tmux.conf, nvim"
-
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   [ -f ~/.zshrc ] || wget -O ~/.zshrc https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.zshrc
   [ -f ~/.tmux.conf ] || wget -O ~/.tmux.conf https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.tmux.conf
   #[ -f ~/.config/nvim/plugin/packer_compiled.lua ] || wget -O ~/.config/nvim/plugin/packer_compiled.lua https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/packer_compiled.lua
