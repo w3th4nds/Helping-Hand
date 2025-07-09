@@ -99,6 +99,3 @@ After you finish, update the .zshrc with
 ```bash
 source ~/.zshrc
 ```
-
-
-
