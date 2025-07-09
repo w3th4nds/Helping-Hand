@@ -24,7 +24,7 @@ This repo contains a quick installer for basic **Binary Exploitation (pwn)**, **
 * Aliases (see `~/.zshrc`)
 * Auto-suggestion.
 * Icons (if icons are not shown correctly, remove the alias `exa --icons` from your `~/.zshrc` file).
-* Cool `tmux` plugins.
+* Cool `tmux` plugins. (Once installed, do "\`**+ r**" for reload and "**\` + I**" for plugins install).
 * Fonts.
 * `pusher` function for fast commits `pusher 'my msg'`
 * `trans N` command to change transparency of terminal. 

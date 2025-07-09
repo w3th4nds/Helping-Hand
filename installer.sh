@@ -184,12 +184,20 @@ install_web() {
 
 install_dot() {
   log_info "Installing dotfiles, .zshrc, .tmux.conf, nvim"
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  sudo apt install -y xclip
+  
+  # Install TPM (Tmux Plugin Manager) safely
+  TPM_DIR="$HOME/.tmux/plugins/tpm"
+  if [ -d "$TPM_DIR" ] && [ -n "$(ls -A "$TPM_DIR")" ]; then
+    echo "TPM already installed at $TPM_DIR, skipping clone."
+  else
+    echo "Installing TPM to $TPM_DIR..."
+    git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
+  fi
+  
   [ -f ~/.zshrc ] || wget -O ~/.zshrc https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.zshrc
   [ -f ~/.tmux.conf ] || wget -O ~/.tmux.conf https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.tmux.conf
-  #[ -f ~/.config/nvim/plugin/packer_compiled.lua ] || wget -O ~/.config/nvim/plugin/packer_compiled.lua https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/packer_compiled.lua
-  #[ -f ~/.config/nvim/init.lua ] || wget -O ~/.config/nvim/init.lua https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/init.lua
-
+  
   log_info "Installing Nerd Fonts"
   mkdir -p ~/.local/share/fonts
   cd ~/.local/share/fonts
