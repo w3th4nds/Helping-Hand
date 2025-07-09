@@ -20,11 +20,11 @@ install_com() {
   log_info "Starting script, installing common tools"
   sudo apt update -y && sudo apt upgrade -y
   sudo apt install -y tree git curl zsh vim python3 python3-pip python3-dev libreoffice \
-           libssl-dev libffi-dev build-essential libncurses-dev libguestfs-tools \
+           libssl-dev libffi-dev build-essential libncurses-dev libguestfs-tools tmux \
            ffmpeg open-vm-tools open-vm-tools-desktop gem gcc ruby-dev gcc-multilib default-jdk \
            fcrackzip ntfs-3g-dev jq nodejs p7zip-full net-tools ncdu \
            nfs-common whois perl vnstat freerdp2-x11 hashcat locate upx \
-           pipx socat neofetch fping pkg-config elfutils xsel cmake liblzma-dev eza
+           pipx socat neofetch fping pkg-config elfutils xsel cmake liblzma-dev eza subversion
   sudo apt autoremove -y
 
   # Docker
@@ -44,18 +44,18 @@ install_com() {
   sudo snap install seclists
 
   # SSH Key (skip if exists)
-  if [ ! -f ~/.ssh/id_rsa ]; then
-    log_info "Creating SSH keys"
-    ssh-keygen -t rsa -b 4096 -C "your@email"
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_rsa
-  else
-    log_info "SSH key already exists. Skipping."
-  fi
+  # if [ ! -f ~/.ssh/id_rsa ]; then
+  #   log_info "Creating SSH keys"
+  #   ssh-keygen -t rsa -b 4096 -C "your@email"
+  #   eval "$(ssh-agent -s)"
+  #   ssh-add ~/.ssh/id_rsa
+  # else
+  #   log_info "SSH key already exists. Skipping."
+  # fi
 
   # Git config (update these manually if needed)
-  git config --global user.email "your@email"
-  git config --global user.name "your_username"
+  # git config --global user.email "your@email"
+  # git config --global user.name "your_username"
 
   # Tmux plugins
   log_info "Installing tmux-mem-cpu-load"
@@ -125,6 +125,26 @@ install_web() {
 install_dot() {
   log_info "Copying dot files"
   
+  # .zshrc
+  log_info "Copying ~/.zshrc"
+  wget -O ~/.zshrc https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.zshrc
+  
+  # Tmux
+  log_info "Copying ~/.tmux.conf"
+  wget -O ~/.tmux.conf https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.tmux.conf
+
+  # Nerd font
+  log_info "Copying /usr/share/nerd fonts"
+  mkdir -p 
+  svn export https://github.com/w3th4nds/Helping-Hand/trunk/dotfiles/nerd ~/usr/share/nerd
+  cd ~/usr/share/nerd
+  fc-cache -vf
+  cd -
+
+  log_info "Installing Nvim + config"
+  # Install nvim
+  bash <(curl -sSL https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/nvim_install.sh)
+
 }
 
 # === Install all ===
@@ -165,3 +185,5 @@ $run_all && install_all
 $run_pwn && install_pwn
 $run_web && install_web
 $run_dot && install_dot
+
+log_info "Installation Finished Successfully"
