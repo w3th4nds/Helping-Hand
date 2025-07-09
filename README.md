@@ -39,6 +39,14 @@ bash <(wget -qO- https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/ss
 
 ### 3. Installation
 
+Running the script in either mode, you should see a screen like this: 
+
+![](assets/install.png)
+
+Enter your password and after that, the installation shall start. If a package is already installed, it will print a message like this and skip it.
+
+![](assets/pre-ins.png)
+
 ### 3.1 Automated
 
 Run:
