@@ -176,12 +176,17 @@ install_dot() {
   [ -f ~/.zshrc ] || wget -O ~/.zshrc https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.zshrc
   [ -f ~/.tmux.conf ] || wget -O ~/.tmux.conf https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.tmux.conf
 
-  if [ ! -d /usr/share/fonts/nerd ]; then
-    sudo mkdir -p /usr/share/fonts/nerd
-    sudo svn export https://github.com/w3th4nds/Helping-Hand/trunk/dotfiles/nerd /usr/share/fonts/nerd
-    sudo fc-cache -vf
+  log_info "Installing Nerd Fonts"
+
+  # Destination
+  FONT_DIR="/usr/share/fonts/nerd"
+
+  if [ ! -d "$FONT_DIR" ]; then
+    sudo mkdir -p "$FONT_DIR"
+    sudo svn export https://github.com/w3th4nds/Helping-Hand/trunk/dotfiles/nerd "$FONT_DIR"
+    sudo fc-cache -fv
   else
-    log_info "Nerd fonts already installed"
+    log_info "Nerd fonts already installed in $FONT_DIR"
   fi
 
   bash <(curl -sSL https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/nvim_install.sh)
