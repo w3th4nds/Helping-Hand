@@ -21,11 +21,13 @@ This repo contains a quick installer for basic **Binary Exploitation (pwn)**, **
 * Nice UI.
 * Basic (and not only) hacking tools included.
 * nvim configuration
-* aliases (see ~/.zshrc)
+* aliases (see `~/.zshrc`)
 * auto-suggestion
-* icons
+* icons (if icons are not shown correctly, remove the alias `exa --icons` from your `~/.zshrc` file.)
+* cool tmux plugins
+* fonts
 
-### 2. Github SSH-keygen
+### 2. Github SSH-keygen (optional)
 
 Create SSH keys for github:
 
@@ -81,6 +83,12 @@ If no options are provided, you see this message:
 If everything went smoothly, you should see this message: 
 
 ![](assets/suc.png)
+
+After you finish, update the .zshrc with 
+
+```bash
+source ~/.zshrc
+```
 
 
 
