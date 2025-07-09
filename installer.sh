@@ -183,23 +183,19 @@ install_web() {
 }
 
 install_dot() {
-  log_info "Installing dotfiles"
+  log_info "Installing dotfiles, .zshrc, .tmux.conf"
 
   [ -f ~/.zshrc ] || wget -O ~/.zshrc https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.zshrc
   [ -f ~/.tmux.conf ] || wget -O ~/.tmux.conf https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.tmux.conf
+  [ -f ~/.config/nvim/plugin/packer_compiled.lua ] || wget -O ~/.config/nvim/plugin/packer_compiled.lua https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/packer_compiled.lua
+  [ -f ~/.config/nvim/init.lua ] || wget -O ~/.config/nvim/init.lua https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/init.lua
 
   log_info "Installing Nerd Fonts"
-
-  # Destination
-  FONT_DIR="/usr/share/fonts/nerd"
-
-  if [ ! -d "$FONT_DIR" ]; then
-    sudo mkdir -p "$FONT_DIR"
-    sudo svn export https://github.com/w3th4nds/Helping-Hand/trunk/dotfiles/nerd "$FONT_DIR"
-    sudo fc-cache -fv
-  else
-    log_info "Nerd fonts already installed in $FONT_DIR"
-  fi
+  mkdir -p ~/.local/share/fonts
+  cd ~/.local/share/fonts
+  wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
+  unzip Hack.zip && rm Hack.zip
+  fc-cache -fv
 
   bash <(curl -sSL https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/nvim_install.sh)
 }

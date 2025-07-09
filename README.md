@@ -16,10 +16,6 @@ If you are an **Ubuntu** user that:
 
 This repo contains a quick installer for basic **Binary Exploitation (pwn)**, **Web Exploitation** and **CTF** stuff, some of my *dotfiles* and things that make my Ubuntu machine less miserable. 
 
-#### ⚠️ *For the gituhb SSH key, change "your@email" and "your_username" to the appropriate ones*. ⚠️
-
-![](assets/ssh.png)
-
 ### 1. Benefits
 
 * Nice UI.
@@ -29,9 +25,17 @@ This repo contains a quick installer for basic **Binary Exploitation (pwn)**, **
 * auto-suggestion
 * icons
 
-### 2. Installation
+### 2. Github SSH-keygen
 
-### 2.1 Automated
+Create SSH keys for github:
+
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/ssh_key_git.sh) -u "username" -e "your@mail"
+```
+
+### 3. Installation
+
+### 3.1 Automated
 
 Run:
 ```bash
@@ -50,7 +54,7 @@ The `--com` option is by default and runs with **every option**.
 
 ⚠️ *If `wget` is not installed by default, run `sudo apt install -y wget `* ⚠️
 
- ### 2.2 Manually
+ ### 3.2 Manually
 
 Git clone the repo (web URL): 
 
