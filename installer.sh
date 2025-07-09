@@ -187,8 +187,8 @@ install_dot() {
 
   [ -f ~/.zshrc ] || wget -O ~/.zshrc https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.zshrc
   [ -f ~/.tmux.conf ] || wget -O ~/.tmux.conf https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.tmux.conf
-  [ -f ~/.config/nvim/plugin/packer_compiled.lua ] || wget -O ~/.config/nvim/plugin/packer_compiled.lua https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/packer_compiled.lua
-  [ -f ~/.config/nvim/init.lua ] || wget -O ~/.config/nvim/init.lua https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/init.lua
+  #[ -f ~/.config/nvim/plugin/packer_compiled.lua ] || wget -O ~/.config/nvim/plugin/packer_compiled.lua https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/packer_compiled.lua
+  #[ -f ~/.config/nvim/init.lua ] || wget -O ~/.config/nvim/init.lua https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/init.lua
 
   log_info "Installing Nerd Fonts"
   mkdir -p ~/.local/share/fonts
