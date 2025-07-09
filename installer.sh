@@ -88,7 +88,6 @@ install_com() {
   fi
 
   install_snap typora
-  install_snap go
   install_snap seclists
 
   log_info "Installing Oh My Zsh"
