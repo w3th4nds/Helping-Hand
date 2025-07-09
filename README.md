@@ -20,12 +20,14 @@ This repo contains a quick installer for basic **Binary Exploitation (pwn)**, **
 
 * Nice UI.
 * Basic (and not only) hacking tools included.
-* nvim configuration
-* aliases (see `~/.zshrc`)
-* auto-suggestion
-* icons (if icons are not shown correctly, remove the alias `exa --icons` from your `~/.zshrc` file.)
-* cool tmux plugins
-* fonts
+* `nvim` configuration
+* Aliases (see `~/.zshrc`)
+* Auto-suggestion.
+* Icons (if icons are not shown correctly, remove the alias `exa --icons` from your `~/.zshrc` file).
+* Cool `tmux` plugins.
+* Fonts.
+* `pusher` function for fast commits `pusher 'my msg'`
+* `trans N` command to change transparency of terminal. 
 
 ### 2. Github SSH-keygen (optional)
 

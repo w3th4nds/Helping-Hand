@@ -183,7 +183,7 @@ install_web() {
 }
 
 install_dot() {
-  log_info "Installing dotfiles, .zshrc, .tmux.conf"
+  log_info "Installing dotfiles, .zshrc, .tmux.conf, nvim"
 
   [ -f ~/.zshrc ] || wget -O ~/.zshrc https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.zshrc
   [ -f ~/.tmux.conf ] || wget -O ~/.tmux.conf https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/dotfiles/.tmux.conf
