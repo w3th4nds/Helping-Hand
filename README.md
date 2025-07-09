@@ -99,3 +99,14 @@ After you finish, update the .zshrc with
 ```bash
 source ~/.zshrc
 ```
+
+#### 4. Extensions
+
+The current extensions I use are:
+
+* Compact Top Bar
+* Dash to Panel
+* Extension List
+
+* Screenshot-cut
+* System Monitor
