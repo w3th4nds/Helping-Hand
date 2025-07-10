@@ -100,7 +100,21 @@ After you finish, update the .zshrc with
 source ~/.zshrc
 ```
 
-#### 4. Extensions
+### 4. Sublime text editor config
+
+After you install `sublime` from `ubuntu app store`, run this to set the configuration:
+
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/sublime.sh)
+```
+
+This will set:
+
+* Brogrammer theme
+* Identation -> tab == 2 spaces
+* Word wrap -> true
+
+### 5. Extensions
 
 The current extensions I use are:
 
