@@ -28,6 +28,7 @@ This repo contains a quick installer for basic **Binary Exploitation (pwn)**, **
 * Fonts.
 * `pusher` function for fast commits `pusher 'my msg'`
 * `trans N` command to change transparency of terminal. 
+* `sublime text editor` configurations.
 
 ### 2. Github SSH-keygen (optional)
 
@@ -110,9 +111,9 @@ bash <(wget -qO- https://raw.githubusercontent.com/w3th4nds/Helping-Hand/main/su
 
 This will set:
 
-* Brogrammer theme
-* Identation -> tab == 2 spaces
-* Word wrap -> true
+* `Brogrammer` theme.
+* `Identation` -> `tab` == `2 spaces`.
+* `Word wrap` -> `true`.
 
 ### 5. Extensions
 
