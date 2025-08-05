@@ -115,7 +115,21 @@ This will set:
 * `Identation` -> `tab` == `2 spaces`.
 * `Word wrap` -> `true`.
 
-### 5. Extensions
+### 5. Pwn solver.py template
+
+You can run: 
+
+```bash
+pwn_template
+```
+
+If it's added to the `.zshrc` to create a nice python script template or manually:
+
+```bash
+wget https://raw.githubusercontent.com/w3th4nds/Helping-Hand/refs/heads/main/dotfiles/solver.py
+```
+
+### 6. Extensions
 
 The current extensions I use are:
 
