@@ -67,7 +67,7 @@ install_com() {
     ffmpeg open-vm-tools open-vm-tools-desktop gem gcc ruby-dev gcc-multilib default-jdk
     fcrackzip ntfs-3g-dev jq nodejs npm p7zip-full net-tools ncdu
     nfs-common whois perl vnstat hashcat locate upx
-    pipx socat neofetch fping pkg-config elfutils xsel cmake liblzma-dev eza subversion
+    pipx socat fping pkg-config elfutils xsel cmake liblzma-dev eza subversion
   )
 
   for pkg in "${packages[@]}"; do
