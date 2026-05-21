@@ -66,7 +66,7 @@ install_com() {
     libssl-dev libffi-dev build-essential libncurses-dev libguestfs-tools tmux
     ffmpeg open-vm-tools open-vm-tools-desktop gem gcc ruby-dev gcc-multilib default-jdk
     fcrackzip ntfs-3g-dev jq nodejs npm p7zip-full net-tools ncdu
-    nfs-common whois perl vnstat freerdp2-x11 hashcat locate upx
+    nfs-common whois perl vnstat hashcat locate upx
     pipx socat neofetch fping pkg-config elfutils xsel cmake liblzma-dev eza subversion
   )
 
