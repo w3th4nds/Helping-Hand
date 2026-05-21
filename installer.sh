@@ -88,7 +88,6 @@ install_com() {
   fi
 
   install_snap typora
-  install_snap seclists
 
   log_info "Installing Oh My Zsh"
   if [ ! -d "$HOME/.oh-my-zsh" ]; then
